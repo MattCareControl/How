@@ -1,0 +1,69 @@
+settings = {
+    splashScreen = 
+    {
+         enable = false
+     },
+    build =
+    {
+        neverStripDebugInfo = true,
+    },
+	orientation =
+	{
+        default = "portrait",
+        supported = { "portrait", "portraitUpsideDown" },
+	},
+	iphone =
+	{
+        xcassets = "Images.xcassets", 
+		plist=
+		{
+            NSPhotoLibraryUsageDescription = "You have chosen to upload a picture from your photo library.  Please be aware that thi picture will be shown within care plans and be visible to other staff members.",
+            NSCameraUsageDescription = "You have chosen to upload a picture or scan a QR Code.  Please be aware that any picture you upload will be shown within care plans and be visible to other staff members.",
+            NSLocationWhenInUseUsageDescription = "This app works best by knowing your location to enable Check In and Check Out functionality for staff.",
+                  NSAppTransportSecurity =
+                     {
+                        NSAllowsArbitraryLoads = true
+                     },
+			UIApplicationExitsOnSuspend = true,
+			UIStatusBarHidden=true,
+			UIAppFonts = {"Calibri.ttf"},
+            UIAppFonts = {"GillSans-Book.ttf"},
+            CFBundleIdentifier="uk.co.carecontrol.howwhatwhen",
+            CFBundleShortVersionString = "1.00",
+		},
+	},
+    osx = {
+        plist = {
+                      NSAppTransportSecurity =
+                     {
+                        NSAllowsArbitraryLoads = true
+                     },
+            UIApplicationExitsOnSuspend = true,
+            UIStatusBarHidden=true,
+            UIAppFonts = {"Calibri.ttf"},
+            UIAppFonts = {"GillSans-Book.ttf"},
+            UIBackgroundModes = {"remote-notification"},
+        },
+    },
+    window = {
+         defaultMode = "normal",
+         resizable = true,
+         enableMaximizeButton = true,
+        titleText = {
+            -- The "default" text will be used if the system is using a language and/or
+            -- country code not defined below. This serves as a fallback mechanism.
+            default = "How, What, When... V 0.1",
+
+        },
+    },
+android =
+{
+usesPermissions =
+{
+            "android.permission.VIBRATE",
+			      "android.permission.INTERNET",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.CALL_PHONE",
+},
+},
+}
